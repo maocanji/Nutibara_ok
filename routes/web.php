@@ -23,3 +23,6 @@ Route::get('inicio', [ ControllerServicios::class, 'inicio' ]);
 
 Route::post('GuardarCiudades', [ \App\Http\Controllers\ControllerServicios::class, 'GuardarCiudades' ])->name('GuardarCiudades');
 Route::post('GuardarClientes', [ \App\Http\Controllers\ControllerServicios::class, 'GuardarClientes' ])->name('GuardarClientes');
+Route::post('GuardarOrders', [ \App\Http\Controllers\ControllerServicios::class, 'GuardarOrders' ])->name('GuardarOrders');
+Route::post('GuardarProductos', [ \App\Http\Controllers\ControllerServicios::class, 'GuardarProductos' ])->name('GuardarProductos');
+Route::post('GuardarDetails', [ \App\Http\Controllers\ControllerServicios::class, 'GuardarDetails' ])->name('GuardarDetails');

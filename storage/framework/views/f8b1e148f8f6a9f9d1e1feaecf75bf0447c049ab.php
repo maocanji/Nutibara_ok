@@ -1,5 +1,5 @@
 
-        {{-- formuarios --}}
+        
         <div class="ibox ">
             <div class="ibox-title">
                 <h5>Formulario  <small>Pedidos</small></h5>
@@ -54,7 +54,7 @@
                   </form>
             </div>
         </div>
-        {{-- tablas de registros --}}
+        
         <div class="row">
 
             <div class="col-lg-12">
@@ -115,3 +115,4 @@
             </div>
 
         </div>
+<?php /**PATH D:\DEV\Prueba_tecnica\gitLocal\Nutibara\Nutibara_ok\resources\views/layouts/formularios/Orders.blade.php ENDPATH**/ ?>

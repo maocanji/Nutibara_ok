@@ -20,9 +20,13 @@ class Order_detatails extends Model
         ];
     protected $primaryKey = 'detail_id'; // primary
 
-    public function rel_city() {
+    public function rel_producto() {
 
         return $this->belongsTo('App\Models\Products', 'product_id', 'product_id');
+    }
+    public function rel_order() {
+
+        return $this->belongsTo('App\Models\Orders', 'order_id', 'order_id');
     }
 }
 

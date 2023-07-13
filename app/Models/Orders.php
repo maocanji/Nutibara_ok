@@ -19,6 +19,7 @@ class Orders extends Model
             "order_total",
             "order_date_delivery",
             "customers_status",
+            "customers_id",
         ];
     protected $primaryKey = 'order_id'; // primary
 

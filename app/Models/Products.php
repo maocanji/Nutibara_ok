@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Products extends Model
 {
     use HasFactory;
-    protected $table      = "Order_Details";
+    protected $table      = "products";
     protected $dates = [ 'created_at','updated_at' ];
     public $timestamps = false;
 

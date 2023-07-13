@@ -118,4 +118,4 @@
             </div>
 
         </div>
-<?php /**PATH D:\DEV\Prueba_tecnica\Nutibara_prueba\resources\views/layouts/formularios/Customers.blade.php ENDPATH**/ ?>
+<?php /**PATH D:\DEV\Prueba_tecnica\gitLocal\Nutibara\Nutibara_ok\resources\views/layouts/formularios/Customers.blade.php ENDPATH**/ ?>

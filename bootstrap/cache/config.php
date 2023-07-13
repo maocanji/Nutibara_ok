@@ -195,7 +195,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'D:\\DEV\\Prueba_tecnica\\gitLocal\\Nutibara\\storage\\framework/cache/data',
+        'path' => 'D:\\DEV\\Prueba_tecnica\\gitLocal\\Nutibara\\Nutibara_ok\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -368,13 +368,13 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'D:\\DEV\\Prueba_tecnica\\gitLocal\\Nutibara\\storage\\app',
+        'root' => 'D:\\DEV\\Prueba_tecnica\\gitLocal\\Nutibara\\Nutibara_ok\\storage\\app',
         'throw' => false,
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'D:\\DEV\\Prueba_tecnica\\gitLocal\\Nutibara\\storage\\app/public',
+        'root' => 'D:\\DEV\\Prueba_tecnica\\gitLocal\\Nutibara\\Nutibara_ok\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
         'throw' => false,
@@ -394,7 +394,7 @@
     ),
     'links' => 
     array (
-      'D:\\DEV\\Prueba_tecnica\\gitLocal\\Nutibara\\public\\storage' => 'D:\\DEV\\Prueba_tecnica\\gitLocal\\Nutibara\\storage\\app/public',
+      'D:\\DEV\\Prueba_tecnica\\gitLocal\\Nutibara\\Nutibara_ok\\public\\storage' => 'D:\\DEV\\Prueba_tecnica\\gitLocal\\Nutibara\\Nutibara_ok\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -433,13 +433,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'D:\\DEV\\Prueba_tecnica\\gitLocal\\Nutibara\\storage\\logs/laravel.log',
+        'path' => 'D:\\DEV\\Prueba_tecnica\\gitLocal\\Nutibara\\Nutibara_ok\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'D:\\DEV\\Prueba_tecnica\\gitLocal\\Nutibara\\storage\\logs/laravel.log',
+        'path' => 'D:\\DEV\\Prueba_tecnica\\gitLocal\\Nutibara\\Nutibara_ok\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -491,7 +491,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'D:\\DEV\\Prueba_tecnica\\gitLocal\\Nutibara\\storage\\logs/laravel.log',
+        'path' => 'D:\\DEV\\Prueba_tecnica\\gitLocal\\Nutibara\\Nutibara_ok\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -557,7 +557,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'D:\\DEV\\Prueba_tecnica\\gitLocal\\Nutibara\\resources\\views/vendor/mail',
+        0 => 'D:\\DEV\\Prueba_tecnica\\gitLocal\\Nutibara\\Nutibara_ok\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -663,7 +663,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'D:\\DEV\\Prueba_tecnica\\gitLocal\\Nutibara\\storage\\framework/sessions',
+    'files' => 'D:\\DEV\\Prueba_tecnica\\gitLocal\\Nutibara\\Nutibara_ok\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -683,9 +683,9 @@
   array (
     'paths' => 
     array (
-      0 => 'D:\\DEV\\Prueba_tecnica\\gitLocal\\Nutibara\\resources\\views',
+      0 => 'D:\\DEV\\Prueba_tecnica\\gitLocal\\Nutibara\\Nutibara_ok\\resources\\views',
     ),
-    'compiled' => 'D:\\DEV\\Prueba_tecnica\\gitLocal\\Nutibara\\storage\\framework\\views',
+    'compiled' => 'D:\\DEV\\Prueba_tecnica\\gitLocal\\Nutibara\\Nutibara_ok\\storage\\framework\\views',
   ),
   'flare' => 
   array (
@@ -760,7 +760,7 @@
     array (
     ),
     'enable_runnable_solutions' => NULL,
-    'remote_sites_path' => 'D:\\DEV\\Prueba_tecnica\\gitLocal\\Nutibara',
+    'remote_sites_path' => 'D:\\DEV\\Prueba_tecnica\\gitLocal\\Nutibara\\Nutibara_ok',
     'local_sites_path' => '',
     'housekeeping_endpoint_prefix' => '_ignition',
     'settings_file_path' => '',

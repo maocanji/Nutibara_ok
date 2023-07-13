@@ -102,7 +102,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::Doge6j96nDOSic5t',
+            '_route' => 'generated::eDS0UDLhuKZYio4O',
           ),
           1 => NULL,
           2 => 
@@ -122,7 +122,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::egQNgRHiN1gBoHuD',
+            '_route' => 'generated::P87B91Tx5BWLzZIS',
           ),
           1 => NULL,
           2 => 
@@ -142,7 +142,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::ya9ZQdaJAjTvaoc2',
+            '_route' => 'generated::JvJ8gfdVLglP7Tuf',
           ),
           1 => NULL,
           2 => 
@@ -182,6 +182,63 @@ app('router')->setCompiledRoutes(
           0 => 
           array (
             '_route' => 'GuardarClientes',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/GuardarOrders' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'GuardarOrders',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/GuardarProductos' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'GuardarProductos',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/GuardarDetails' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'GuardarDetails',
           ),
           1 => NULL,
           2 => 
@@ -351,7 +408,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::Doge6j96nDOSic5t' => 
+    'generated::eDS0UDLhuKZYio4O' => 
     array (
       'methods' => 
       array (
@@ -374,7 +431,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::Doge6j96nDOSic5t',
+        'as' => 'generated::eDS0UDLhuKZYio4O',
       ),
       'fallback' => false,
       'defaults' => 
@@ -390,7 +447,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::egQNgRHiN1gBoHuD' => 
+    'generated::P87B91Tx5BWLzZIS' => 
     array (
       'methods' => 
       array (
@@ -412,7 +469,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::egQNgRHiN1gBoHuD',
+        'as' => 'generated::P87B91Tx5BWLzZIS',
       ),
       'fallback' => false,
       'defaults' => 
@@ -428,7 +485,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::ya9ZQdaJAjTvaoc2' => 
+    'generated::JvJ8gfdVLglP7Tuf' => 
     array (
       'methods' => 
       array (
@@ -449,7 +506,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::ya9ZQdaJAjTvaoc2',
+        'as' => 'generated::JvJ8gfdVLglP7Tuf',
       ),
       'fallback' => false,
       'defaults' => 
@@ -522,6 +579,114 @@ app('router')->setCompiledRoutes(
         array (
         ),
         'as' => 'GuardarClientes',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'GuardarOrders' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'GuardarOrders',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ControllerServicios@GuardarOrders',
+        'controller' => 'App\\Http\\Controllers\\ControllerServicios@GuardarOrders',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'GuardarOrders',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'GuardarProductos' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'GuardarProductos',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ControllerServicios@GuardarProductos',
+        'controller' => 'App\\Http\\Controllers\\ControllerServicios@GuardarProductos',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'GuardarProductos',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'GuardarDetails' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'GuardarDetails',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ControllerServicios@GuardarDetails',
+        'controller' => 'App\\Http\\Controllers\\ControllerServicios@GuardarDetails',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'GuardarDetails',
       ),
       'fallback' => false,
       'defaults' => 

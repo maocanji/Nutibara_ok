@@ -1,27 +1,34 @@
+
         
         <div class="ibox ">
             <div class="ibox-title">
-                <h5>Formulario  <small>Ciudades</small></h5>
+                <h5>Formulario  <small>Detalles</small></h5>
                 <div class="ibox-tools">
                 </div>
             </div>
             <div class="ibox-content">
-                <form name="Form_ciudades">
-                    <div class="mb-3">
-                      <label for="nombre" class="form-label">Nombre ciudades</label>
-                      <input type="text" class="form-control" id="nombre"  ng-model="Form_ciudades.ciudades" placeholder="Registra ...." required="required" >
+                <form name="Form_detalles">
+                   
+                    <div class="mb-3 form-group">
+                        <strong>Productos </strong><span class="text-danger">*</span>
+                        <select  class="form-control" ng-options="item as item.product_description for item in productos track by item.product_id" ng-model="Form_detalles.product_id"></select>
+                        <small class="text-muted">Obligatorio</small>
                     </div>
-
-                    
+                      <li class="dropdown-divider"></li>
+                      <div class="mb-3 form-group">
+                        <strong>Ordenes </strong><span class="text-danger">*</span>
+                        <select  class="form-control" ng-options="item as item.customers_status for item in order track by item.order_id" ng-model="Form_detalles.order_id"></select>
+                        <small class="text-muted">Obligatorio</small>
+                    </div>
         <li class="dropdown-divider"></li>
         <div class="clearfix"></div>
-        <div class="alert alert-danger alert-dismissable" ng-repeat="error in errorsciudades" >
+        <div class="alert alert-danger alert-dismissable" ng-repeat="error in detallerErrors" >
             <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
             <%error[0]%>
         </div>
         <div class="clearfix"></div>
-                    <button class="btn btn-white btn-sm" ng-click="cancelarPublicacion()">Cancelar</button>
-                    <button class="btn btn-primary btn-sm" ng-click='submit_GuardarCiudades(Form_ciudades)' >Guardar </button>
+                    <button class="btn btn-white btn-sm" ng-click="cancelar()">Cancelar</button>
+                    <button class="btn btn-primary btn-sm" ng-click='submit_GuardarDetail(Form_detalles)' >Guardar </button>
                   </form>
             </div>
         </div>
@@ -57,13 +64,16 @@
                                 <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Ciudades </th>
+                                    <th>Datos del producto </th>
+                                    <th>Datos del Pedido </th>
+
                                 </tr>
                                 </thead>
                                 <tbody>
-                                    <tr ng-repeat="list in ciudades track by $index">
+                                    <tr ng-repeat="list in detalles track by $index">
                                         <td> <strong class="text-capitalize"><%$index +1%> </strong></td>
-                                        <td><small><span class="text-success"> <%list.city_name %> </span></small></td>
+                                        <td><small><span class="text-success"> Descripción  :<%list.rel_producto['product_description'] %> - Valor : <%list.rel_producto.product_value %> </span></small></td> 
+                                        <td> <strong class="text-capitalize">Fecha de orden <%list.rel_order.order_date  |date:'dd/MM/yyyy'%> - <%list.rel_order.customers_status%> </strong></td>
                                   
                                     </tr>
                             
@@ -75,5 +85,4 @@
                 </div>
             </div>
 
-        </div>
-<?php /**PATH D:\DEV\Prueba_tecnica\gitLocal\Nutibara\resources\views/layouts/formularios/Cities.blade.php ENDPATH**/ ?>
+        </div><?php /**PATH D:\DEV\Prueba_tecnica\gitLocal\Nutibara\Nutibara_ok\resources\views/layouts/formularios/Order_Details.blade.php ENDPATH**/ ?>

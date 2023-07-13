@@ -10,9 +10,10 @@
             <ul class="nav nav-tabs" role="tablist">
                 <li><a class="nav-link active" data-toggle="tab" href="#tab-cities"> Ciudades</a></li>
                 <li><a class="nav-link" data-toggle="tab" href="#tab-customers">Clientes</a></li>
+                <li><a class="nav-link" data-toggle="tab" href="#tab-products">Productos</a></li>
+
                 <li><a class="nav-link" data-toggle="tab" href="#tab-orders">Ordenes </a></li>
                 <li><a class="nav-link" data-toggle="tab" href="#tab-details">Detalles  </a></li>
-                <li><a class="nav-link" data-toggle="tab" href="#tab-products">Productos</a></li>
                 
             </ul>
             <div class="tab-content">
@@ -122,6 +123,9 @@
             // $scope.ciudades = 0; 
              $rootScope.ciudades = {!! $ciudades !!}; 
              $rootScope.clientes = {!! $clientes !!}; 
+             $rootScope.order = {!! $order !!}; 
+             $rootScope.productos = {!! $productos !!}; 
+             $rootScope.detalles = {!! $detalles !!}; 
 
             $scope.submit_GuardarCiudades= function (Form_ciudades) {
             $scope.Form_ciudades =Form_ciudades;
@@ -186,10 +190,98 @@
                 } ;
             } ;
         
+        
+            //Form_Orders
+            $scope.submit_GuardarOrder= function (Form_order) {
+            $scope.Form_order =Form_order;
+             console.log( Form_order);
+            $scope.ruta = '{!! route( "GuardarOrders" ) !!}';
+            /*Se envían los datos del formulario por ajax*/
+            $http.post( $scope.ruta ,
+                {
+                    order_date :  Form_order['order_date'] ,
+                    order_total :  Form_order['order_total'] ,
+                    order_date_delivery :  Form_order['order_date_delivery'] ,
+                    customers_status :  Form_order['customers_status'] ,
+                    customers_id :  Form_order['customers_id'] ,
+                }).then( function( responsive) {
+                // $scope.data = responsive.data;
+                $scope.order.push(responsive.data.order);
+                $scope.resetForm(Form_customers);
+            }).catch( function( data ){
+                $scope.orders_error = data.data.errors; 
+                return $scope.orders_error;
+            });
+
+            $scope.resetForm = function(Form_customers) {
+                //Even when you use form = {} it does not work
+                Form_customers.customers_id_number = '';
+                Form_customers.customers_name = '';
+                Form_customers.customers_birth_date = '';
+                Form_customers.customers_address = '';
+                Form_customers.customers_phone = '';
+                Form_customers.ciudad_id = '';
+              
+                } ;
+            } ;
+
+       
+
+             //Form_Productos
+             $scope.submit_GuardarProductos= function (Form_products) {
+            $scope.Form_products =Form_products;
+             console.log( Form_products);
+            $scope.ruta = '{!! route( "GuardarProductos" ) !!}';
+            /*Se envían los datos del formulario por ajax*/
+            $http.post( $scope.ruta ,
+                {
+                    product_description :  Form_products['product_description'] ,
+                    product_amount :  Form_products['product_amount'] ,
+                    product_value :  Form_products['product_value'] ,
+                    customers_status :  Form_products['customers_status'] ,
+                    product_status :  Form_products['product_status'] ,
+                }).then( function( responsive) {
+                // $scope.data = responsive.data;
+                $scope.productos.push(responsive.data.productos);
+                $scope.resetForm(Form_products);
+            }).catch( function( data ){
+                $scope.producterrors = data.data.errors; 
+                return $scope.producterrors;
+            });
+
+          
+            } ;
 
 
+             //Form_details
+             $scope.submit_GuardarDetail= function (Form_detalles) {
+            $scope.Form_detalles =Form_detalles;
+             console.log( Form_detalles);
+            $scope.ruta = '{!! route( "GuardarDetails" ) !!}';
+            /*Se envían los datos del formulario por ajax*/
+            $http.post( $scope.ruta ,
+                {
+                    product_id :  Form_detalles['product_id'] ,
+                    order_id :  Form_detalles['order_id'] ,
+                
+                }).then( function( responsive) {
+                // $scope.data = responsive.data;
+                $scope.detalles.push(responsive.data.detalles);
+                $scope.resetForm(Form_detalles);
+            }).catch( function( data ){
+                $scope.detallerErrors = data.data.errors; 
+                return $scope.detallerErrors;
+            });
 
-        });
+          
+            } ;
+        
+
+
+            
+
+
+        });//cerrar
      
 
 

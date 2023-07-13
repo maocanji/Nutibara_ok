@@ -7,20 +7,28 @@
                 </div>
             </div>
             <div class="ibox-content">
-                <form>
-                    <div class="mb-3">
-                      <label for="nombre" class="form-label">Nombre</label>
-                      <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+                <form name="Form_detalles">
+                   
+                    <div class="mb-3 form-group">
+                        <strong>Productos </strong><span class="text-danger">*</span>
+                        <select  class="form-control" ng-options="item as item.product_description for item in productos track by item.product_id" ng-model="Form_detalles.product_id"></select>
+                        <small class="text-muted">Obligatorio</small>
                     </div>
-                    <div class="mb-3">
-                      <label for="email" class="form-label">Email</label>
-                      <input type="email" class="form-control" id="email" placeholder="Ingresa tu email">
+                      <li class="dropdown-divider"></li>
+                      <div class="mb-3 form-group">
+                        <strong>Ordenes </strong><span class="text-danger">*</span>
+                        <select  class="form-control" ng-options="item as item.customers_status for item in order track by item.order_id" ng-model="Form_detalles.order_id"></select>
+                        <small class="text-muted">Obligatorio</small>
                     </div>
-                    <div class="mb-3">
-                      <label for="mensaje" class="form-label">Mensaje</label>
-                      <textarea class="form-control" id="mensaje" rows="3" placeholder="Ingresa tu mensaje"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Guardar</button>
+        <li class="dropdown-divider"></li>
+        <div class="clearfix"></div>
+        <div class="alert alert-danger alert-dismissable" ng-repeat="error in detallerErrors" >
+            <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+            <%error[0]%>
+        </div>
+        <div class="clearfix"></div>
+                    <button class="btn btn-white btn-sm" ng-click="cancelar()">Cancelar</button>
+                    <button class="btn btn-primary btn-sm" ng-click='submit_GuardarDetail(Form_detalles)' >Guardar </button>
                   </form>
             </div>
         </div>
@@ -30,7 +38,7 @@
             <div class="col-lg-12">
                 <div class="ibox ">
                     <div class="ibox-title">
-                        <h5>Custom responsive table </h5>
+                        <h5>Registros de Ciudades</h5>
                         <div class="ibox-tools">
                             <a class="collapse-link">
                                 <i class="fa fa-chevron-up"></i>
@@ -50,51 +58,24 @@
                         </div>
                     </div>
                     <div class="ibox-content">
-                        <div class="row">
-                            <div class="col-sm-9 m-b-xs">
-                                <div data-toggle="buttons" class="btn-group btn-group-toggle">
-                                    <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> Day </label>
-                                    <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> Week </label>
-                                    <label class="btn btn-sm btn-white"> <input type="radio" id="option3" name="options"> Month </label>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control form-control-sm" placeholder="Search">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-sm btn-primary" type="button">Go!</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                   
                         <div class="table-responsive">
-                            <table class="table table-striped">
+                            <table  class="table dataTables-example">
                                 <thead>
                                 <tr>
-
                                     <th>#</th>
-                                    <th>Project </th>
-                                    <th>Name </th>
-                                    <th>Phone </th>
-                                    <th>Company </th>
-                                    <th>Completed </th>
-                                    <th>Task</th>
-                                    <th>Date</th>
-                                    <th>Action</th>
+                                    <th>Datos del producto </th>
+                                    <th>Datos del Pedido </th>
+
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Project <small>This is example of project</small></td>
-                                    <td>Patrick Smith</td>
-                                    <td>0800 051213</td>
-                                    <td>Inceptos Hymenaeos Ltd</td>
-                                    <td><span class="pie">0.52/1.561</span></td>
-                                    <td>20%</td>
-                                    <td>Jul 14, 2013</td>
-                                    <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
-                                </tr>
+                                    <tr ng-repeat="list in detalles track by $index">
+                                        <td> <strong class="text-capitalize"><%$index +1%> </strong></td>
+                                        <td><small><span class="text-success"> Descripción  :<%list.rel_producto['product_description'] %> - Valor : <%list.rel_producto.product_value %> </span></small></td> 
+                                        <td> <strong class="text-capitalize">Fecha de orden <%list.rel_order.order_date  |date:'dd/MM/yyyy'%> - <%list.rel_order.customers_status%> </strong></td>
+                                  
+                                    </tr>
                             
                                 </tbody>
                             </table>

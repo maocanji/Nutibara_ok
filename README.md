@@ -29,9 +29,11 @@ Consideraciones:
 
 
 
-composer create-project --prefer-dist laravel/laravel NUTIBARA_PRUEBA
+composer create-project --prefer-dist laravel/laravel NUTIBARA
 php artisan key:generate
 php artisan serve  - [(http://127.0.0.1:8000/]
+
+
 
 
 php artisan migrate (YES)
@@ -41,6 +43,15 @@ php artisan migrate (YES)
 php artisan config:cache 
 php artisan config:clear 
  composer dump-autoload -o
+
+
+
+- composer dump-autoload
+- composer install
+- php artisan cache:clear
+- php artisan config:clear
+- php artisan optimize
+- php artisan clear-compiled
 
 
 
