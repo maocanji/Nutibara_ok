@@ -27,7 +27,7 @@ class requeProductos extends FormRequest
             'product_description' => 'required|min:5',
             'product_amount' => 'required',
             'product_value' => 'required',
-            'product_status' => 'required',
+            'product_status' => 'required|max:10',
 
         ];
     }
