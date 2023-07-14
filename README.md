@@ -21,7 +21,7 @@ Consideraciones:
 
 
 ## MER
-![Alt text](image-1.png)
+
 
 
 
@@ -39,4 +39,6 @@ composer create-project --prefer-dist laravel/laravel NUTIBARA_ok
 - php artisan optimize
 - php artisan clear-compiled
 
-php artisan serve  - [(http://127.0.0.1:8000/]
+- php artisan serve  - [(http://127.0.0.1:8000/inicio]
+
+
